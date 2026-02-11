@@ -1,6 +1,6 @@
-variable "synapse_workspace_security_alert_policys" {
+variable "synapse_workspace_security_alert_policies" {
   description = <<EOT
-Map of synapse_workspace_security_alert_policys, attributes below
+Map of synapse_workspace_security_alert_policies, attributes below
 Required:
     - policy_state
     - synapse_workspace_id
@@ -17,9 +17,9 @@ EOT
     policy_state                 = string
     synapse_workspace_id         = string
     disabled_alerts              = optional(set(string))
-    email_account_admins_enabled = optional(bool, false)
+    email_account_admins_enabled = optional(bool) # Default: false
     email_addresses              = optional(set(string))
-    retention_days               = optional(number, 0)
+    retention_days               = optional(number) # Default: 0
     storage_account_access_key   = optional(string)
     storage_endpoint             = optional(string)
   }))

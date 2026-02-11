@@ -1,5 +1,5 @@
-resource "azurerm_synapse_workspace_security_alert_policy" "synapse_workspace_security_alert_policys" {
-  for_each = var.synapse_workspace_security_alert_policys
+resource "azurerm_synapse_workspace_security_alert_policy" "synapse_workspace_security_alert_policies" {
+  for_each = var.synapse_workspace_security_alert_policies
 
   policy_state                 = each.value.policy_state
   synapse_workspace_id         = each.value.synapse_workspace_id
